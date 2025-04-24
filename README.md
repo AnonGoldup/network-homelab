@@ -31,6 +31,31 @@ This repo documents the architecture and configuration of my home lab, designed 
 
 ---
 
+## 🧰 Tools & Services Used
+
+Here are the key systems and apps running in my home lab:
+
+### Core Infrastructure
+- **Proxmox VE** – Virtualization platform for VMs and containers
+- **TrueNAS Scale** – Network-attached storage with ZFS
+- **Fortinet FortiGate** – Firewall, VPN, VLANs, and network segmentation
+
+### Self-Hosted Applications
+- **Plex** – Media server with Intel QuickSync
+- **Bitwarden** – Self-hosted password manager
+- **Mealie** – Recipe management system
+- **Uptime Kuma** – Service monitoring and status tracking
+- **Portainer** – Docker container management GUI
+- **Home Assistant** – Smart home integration and automation
+- **Nginx Proxy Manager** – Reverse proxy for secure remote access
+
+### Access & Admin
+- **JuiceSSH** – SSH management from mobile
+- **Cloudflare Tunnel** – Secure remote access to services
+- **WatchTower** – Auto-updates for Docker containers
+
+---
+
 ## 🔧 Setup Notes
 
 - Configured static IPs and DHCP reservations by device type
@@ -41,13 +66,12 @@ This repo documents the architecture and configuration of my home lab, designed 
 
 ---
 
-## 📸 Screenshots
+## 🔐 Security Practices
 
-Add your own:
-- `network-diagram.png`
-- TrueNAS dashboard
-- Proxmox VM list
-- Fortinet firewall rules
+- MFA enabled on all remote access services
+- No port forwarding; remote access via Cloudflare Tunnel
+- Firewall rules block VLAN-to-VLAN traffic by default
+- Regular backups of Proxmox and TrueNAS configs
 
 ---
 
